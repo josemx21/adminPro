@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MultiDataSet, Label, Color } from 'ng2-charts';
+import { Component, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-grafica1',
@@ -9,17 +9,13 @@ import { MultiDataSet, Label, Color } from 'ng2-charts';
 })
 export class Grafica1Component implements OnInit {
 
-   // Doughnut
-   public doughnutChartLabels: Label[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
-   public doughnutChartData: MultiDataSet = [
-     [350, 450, 100],
+ 
 
-   ];
+public labels1: string[] = ['Pan', 'Refresco', 'Tacos'];
 
-   public colors: Color[] = [
-     { backgroundColor: ['#6857e6', '#009fee', '#f02059']}
-   ]
-/*    public doughnutChartType: ChartType = 'doughnut'; */
+public data1 = [[10, 15, 40],];
+
+   
 
   constructor() { }
 
