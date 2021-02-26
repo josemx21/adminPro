@@ -8,16 +8,18 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class IncrementadorComponent implements OnInit {
 
    @Input('valor') progreso: number = 40; 
+   @Input() btnClass: string = 'btn-primary'; 
 
    @Output('valor') valorSalida: EventEmitter<number> = new EventEmitter();
  
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+    this.btnClass = `btn ${ this.btnClass }`;
   }
 
-  
 
 /*   get getPorcentaje(){
     return `${ this.progreso }%`;
@@ -38,6 +40,19 @@ export class IncrementadorComponent implements OnInit {
     this.progreso = this.progreso + valor;
     this.valorSalida.emit(this.progreso);
 
+  }
+
+  onChange( nuevoValor: number ){
+
+    if( nuevoValor >= 100 ){
+      this.progreso = 100;
+    } else if ( nuevoValor <= 0 ){
+      this.progreso = 0;
+    } else {
+      this.progreso = nuevoValor;
+    }
+    
+    this.valorSalida.emit( this.progreso );
   }
 
 }
