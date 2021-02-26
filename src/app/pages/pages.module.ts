@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 //Modulos
 import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
@@ -31,7 +32,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule, 
     SharedModule, 
     AppRoutingModule,
-    ComponentsModule
+    ComponentsModule,
     ],
 })
 export class PagesModule {}
