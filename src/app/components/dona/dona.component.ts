@@ -13,7 +13,7 @@ export class DonaComponent implements OnInit {
 
   @Input('labels') doughnutChartLabels: Label[] = ['Label1', 'Label2', 'Label3'];
 
-  @ Input('data') doughnutChartData: MultiDataSet = [
+  @Input('data') doughnutChartData: MultiDataSet = [
     [350, 450, 100],
 
   ];
