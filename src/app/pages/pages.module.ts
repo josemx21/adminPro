@@ -14,6 +14,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesaComponent } from './promesa/promesa.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PromesaComponent } from './promesa/promesa.component';
     PagesComponent,
     AccountSettingsComponent,
     PromesaComponent,
+    RxjsComponent,
   ],
   exports: [
     DashboardComponent,
